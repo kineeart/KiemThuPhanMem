@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "68e3724fe38613b12df37665"
+  },
+  "productId": "1",
+  "quantity": 50,
+  "importDate": "2025-08-10",
+  "supplier": "Công ty TNHH Phân phối Công nghệ Minh Tâm"
+},
+{
+  "_id": {
+    "$oid": "68e3724fe38613b12df37666"
+  },
+  "productId": "2",
+  "quantity": 30,
+  "importDate": "2025-08-12",
+  "supplier": "Công ty TNHH Máy tính Việt Long"
+}]

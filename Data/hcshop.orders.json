@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "68e37271e38613b12df3766f"
+  },
+  "userId": "1",
+  "orderDate": "2025-09-15",
+  "status": "Delivered",
+  "totalAmount": 28500000,
+  "paymentMethod": "Credit Card",
+  "deliveryAddress": "Số 24 Đinh Tiên Hoàng, Hà Nội"
+},
+{
+  "_id": {
+    "$oid": "68e37271e38613b12df37670"
+  },
+  "userId": "2",
+  "orderDate": "2025-09-17",
+  "status": "Pending",
+  "totalAmount": 17500000,
+  "paymentMethod": "COD",
+  "deliveryAddress": "123 Nguyễn Huệ, TP.HCM"
+}]

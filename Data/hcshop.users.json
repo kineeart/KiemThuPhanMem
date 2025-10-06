@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "68e372f7e38613b12df376cf"
+  },
+  "fullname": "Nguyễn Văn A",
+  "email": "vana@example.com",
+  "password": "123456",
+  "role": "customer",
+  "address": "Hà Nội"
+},
+{
+  "_id": {
+    "$oid": "68e372f7e38613b12df376d0"
+  },
+  "fullname": "Trần Thị B",
+  "email": "thib@example.com",
+  "password": "654321",
+  "role": "customer",
+  "address": "TP.HCM"
+},
+{
+  "_id": {
+    "$oid": "68e37a1beedc60dce27a13e2"
+  },
+  "name": "abc",
+  "email": "admintest@gmail.com",
+  "avatar": "https://png.pngtree.com/png-clipart/20200701/original/pngtree-default-avatar-png-image_5407175.jpg",
+  "role": "admin",
+  "password": "$2a$12$K6vwPUzjsNoEoaN9cOZOgescSrpGKqh3XPPj0eWssxQL6NzOVoMcW",
+  "active": "verify",
+  "balance": 0,
+  "createdAt": {
+    "$date": "2025-10-06T08:13:15.544Z"
+  },
+  "address": [],
+  "__v": 0,
+  "userVerifyToken": "1fb5c5fea397b073e4fc6824721351f45cdae87582f906eb90c21e27cc6077cb"
+}]

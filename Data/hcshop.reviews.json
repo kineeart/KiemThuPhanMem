@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "68e372cbe38613b12df376ab"
+  },
+  "productId": "1",
+  "userId": "1",
+  "rating": 5,
+  "review": "Rất hài lòng, hiệu năng tốt!"
+}]

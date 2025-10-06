@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "68e372efe38613b12df376cb"
+  },
+  "orderId": "1",
+  "amount": 28500000,
+  "status": "Success",
+  "method": "Credit Card",
+  "transactionDate": "2025-09-15T11:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "68e372efe38613b12df376cc"
+  },
+  "orderId": "2",
+  "amount": 17500000,
+  "status": "Pending",
+  "method": "COD",
+  "transactionDate": "2025-09-17T12:00:00Z"
+}]

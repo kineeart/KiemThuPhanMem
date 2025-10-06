@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "68e3741fe38613b12df376f3"
+  },
+  "name": "ASUS TUF Gaming F15",
+  "brand": "ASUS",
+  "category": "Laptop",
+  "price": 23500000,
+  "promotion": 21500000,
+  "stock": 20,
+  "description": "Laptop gaming 15.6 inch, i7-12700H, RTX 3050, RAM 16GB",
+  "image": "https://nguyencongpc.vn/media/product/24881-asus-tuf-gaming-f15-fx507zu4-lp520w.jpg"
+},
+{
+  "_id": {
+    "$oid": "68e374d5e38613b12df376f6"
+  },
+  "title": "ASUS TUF Gaming F15 FX507ZC4 i7 12700H RTX3050",
+  "price": 23500000,
+  "promotion": 21500000,
+  "description": "Laptop gaming 15.6 inch, Intel Core i7-12700H, GPU RTX 3050, RAM 16GB, SSD 512GB, màn 144Hz, vỏ kim loại.",
+  "images": [
+    "https://cdn.tgdd.vn/Products/Images/44/327974/asus-fx507zc4-i7-hn181w-1-750x500.jpg"
+  ],
+  "ratingsAverage": 4.5,
+  "ratingsQuantity": 12,
+  "inventory": 20,
+  "color": "Đen",
+  "cpu": "Intel Core i7-12700H",
+  "ram": "16GB DDR5",
+  "os": "Windows 11 Home",
+  "weight": 2.3,
+  "screen": "15.6 inch FHD 144Hz",
+  "graphicCard": "NVIDIA RTX 3050 4GB",
+  "battery": "90Wh",
+  "demand": "Gaming",
+  "brand": null,
+  "category": null
+},
+{
+  "_id": {
+    "$oid": "68e374d5e38613b12df376f7"
+  },
+  "title": "MSI Modern 14 C12M i5 1240P 16GB 512GB",
+  "price": 18500000,
+  "promotion": 16500000,
+  "description": "Laptop mỏng nhẹ, Intel Core i5-1240P, RAM 16GB, SSD 512GB, trọng lượng 1.3kg, pin 10 tiếng, phù hợp văn phòng.",
+  "images": [
+    "https://bizweb.dktcdn.net/thumb/grande/100/386/607/products/80021857b25b807aab57155f41a7240b-380e8c5f-e32c-4d0d-b949-a9aac9bad5e7.png?v=1731638267053",
+    "https://bizweb.dktcdn.net/thumb/grande/100/410/941/products/msi-modern-14-c12mo-i5-660vn-3.jpg?v=1754039260543",
+    "https://bizweb.dktcdn.net/thumb/1024x1024/100/410/941/products/msi-modern-14-c12mo-i5-660vn-4.jpg?v=1754039260543"
+  ],
+  "ratingsAverage": 4.3,
+  "ratingsQuantity": 10,
+  "inventory": 15,
+  "color": "Bạc",
+  "cpu": "Intel Core i5-1240P",
+  "ram": "16GB LPDDR4X",
+  "os": "Windows 11 Home",
+  "weight": 1.3,
+  "screen": "14 inch FHD IPS",
+  "graphicCard": "Intel Iris Xe",
+  "battery": "52Wh",
+  "demand": "Văn phòng",
+  "brand": null,
+  "category": null
+},
+{
+  "_id": {
+    "$oid": "68e374d5e38613b12df376f8"
+  },
+  "title": "Dell Ultrasharp U2722D 27 inch QHD IPS 75Hz",
+  "price": 9500000,
+  "promotion": 8900000,
+  "description": "Màn hình Dell Ultrasharp 27 inch 2K, tấm nền IPS, tần số quét 75Hz, viền siêu mỏng, hỗ trợ DisplayPort và HDMI.",
+  "images": [
+    "https://tanthanhdanh.vn/wp-content/uploads/2023/12/u2722d-product-6.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6mgLT14kNhaJY_eFeXIFBdfJRQg8WWNmZwA&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZGs78sBV-kG191Fj09infY462d2MG5NWd5o0bydJKYeHWjUBdocfoQwr4uumheUT04Q&usqp=CAU"
+  ],
+  "ratingsAverage": 4.7,
+  "ratingsQuantity": 20,
+  "inventory": 30,
+  "color": "Xám bạc",
+  "cpu": null,
+  "ram": null,
+  "os": null,
+  "weight": 4.5,
+  "screen": "27 inch QHD IPS 75Hz",
+  "graphicCard": null,
+  "battery": null,
+  "demand": "Màn hình đồ họa",
+  "brand": null,
+  "category": null
+}]

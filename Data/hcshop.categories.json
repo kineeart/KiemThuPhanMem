@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "68e37238e38613b12df37659"
+  },
+  "name": "Laptop",
+  "description": "Máy tính xách tay cho học tập và làm việc"
+},
+{
+  "_id": {
+    "$oid": "68e37238e38613b12df3765a"
+  },
+  "name": "PC",
+  "description": "Máy tính để bàn cấu hình mạnh"
+},
+{
+  "_id": {
+    "$oid": "68e37238e38613b12df3765b"
+  },
+  "name": "Monitor",
+  "description": "Màn hình hiển thị"
+},
+{
+  "_id": {
+    "$oid": "68e37238e38613b12df3765c"
+  },
+  "name": "Keyboard",
+  "description": "Bàn phím cơ và bàn phím không dây"
+},
+{
+  "_id": {
+    "$oid": "68e37238e38613b12df3765d"
+  },
+  "name": "Mouse",
+  "description": "Chuột máy tính các loại"
+},
+{
+  "_id": {
+    "$oid": "68e37238e38613b12df3765e"
+  },
+  "name": "Accessories",
+  "description": "Phụ kiện công nghệ khác"
+}]

@@ -1,27 +1,27 @@
 version: "3.8"
-
 services:
-  mongo:
-    image: mongo:7
+  db:
+    image: mongo:6
     container_name: hcshop_db
     restart: always
     ports:
       - "27017:27017"
     volumes:
-      - ./data:/data/db
+      - ./data/db:/data/db
 
   backend:
     build: ./backend
     container_name: hcshop_backend
-    restart: always
     ports:
       - "3000:3000"
-    environment:
-      - DATABASE=mongodb://mongo:27017/hcshop
-      - JWT_SECRET=secret123
-      - JWT_EXPIRES_IN=90
     depends_on:
-      - mongo
+      - db
+    environment:
+      - DATABASE=mongodb://db:27017/hcshop
+      - PORT=3000
+    volumes:
+      - ./backend:/app
+    command: npm start
 
   frontend:
     build: ./frontend

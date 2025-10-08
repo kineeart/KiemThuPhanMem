@@ -9,8 +9,6 @@ services:
       - "27017:27017"
     volumes:
       - ./data:/data/db
-    environment:
-      MONGO_INITDB_DATABASE: hcshop
 
   backend:
     build: ./backend
@@ -24,3 +22,11 @@ services:
       - JWT_EXPIRES_IN=90
     depends_on:
       - mongo
+
+  frontend:
+    build: ./frontend
+    container_name: hcshop_frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend

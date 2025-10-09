@@ -238,7 +238,7 @@ const ItemAddress = ({ data, data_key }) => {
               <Input
                 type="text"
                 name="fullname"
-                placeholder="Mời bạn nhập tên của bạn"
+                placeholder="Tên nơi giao hàng"
                 control={control}
               ></Input>
               {errors.fullname && (

@@ -115,6 +115,37 @@ const loadBrand = function () {
 function reloadData() {
   $("#sample_data").DataTable().ajax.reload();
 }
+
+// Helper functions for URL inputs
+function addUrlInputField() {
+  const urlInputs = document.getElementById("urlInputs");
+  const newInputGroup = document.createElement("div");
+  newInputGroup.className = "input-group mb-2";
+  newInputGroup.innerHTML = `
+    <input
+      type="url"
+      class="form-control url-input"
+      placeholder="https://example.com/image.jpg"
+      spellcheck="false"
+      autocomplete="off"
+    />
+    <button
+      type="button"
+      class="btn btn-outline-danger remove-url-btn"
+    >
+      ×
+    </button>
+  `;
+  urlInputs.appendChild(newInputGroup);
+}
+
+function updateRemoveButtons() {
+  const removeButtons = document.querySelectorAll(".remove-url-btn");
+  removeButtons.forEach((btn, index) => {
+    btn.style.display = removeButtons.length > 1 ? "block" : "none";
+  });
+}
+
 $(document).ready(async function () {
   $("select").select2({
     theme: "bootstrap-5",
@@ -125,9 +156,14 @@ $(document).ready(async function () {
   $(".navbar-nav li").removeClass("active");
   // $(".nav-item")[0].addClass('active');
   $(".navbar-nav li")[3].className = "nav-item active";
+
+  // Remove URL input field event listener
+  $(document).on("click", ".remove-url-btn", function () {
+    $(this).closest(".input-group").remove();
+    updateRemoveButtons();
+  });
 });
 $("#add_data").click(function () {
-  files = [];
   $("#dynamic_modal_title").text("Add Product");
   $("#sample_form")[0].reset();
   $("#category").val(null).trigger("change");
@@ -139,13 +175,12 @@ $("#add_data").click(function () {
   $("#id").val("");
 
   $("#action_button").text("Add");
-  $(".img-show").empty();
+  $(".url-img-show").empty();
   $(".mb-2").show();
 
   $("#action_modal").modal("show");
 });
 $(document).on("click", ".edit", function () {
-  files = [];
   $("#sample_form")[0].reset();
   const id = $(this).data("id");
 
@@ -157,8 +192,11 @@ $(document).on("click", ".edit", function () {
 
   $("#action_modal").modal("show");
   $(".mb-2").hide();
-  $(".img-show").empty();
+  $(".url-img-show").empty();
   $(".edit-show").show();
+
+  // Clear URL inputs first
+  $(".url-input").val("");
 
   $.ajax({
     url: `/api/v1/products/${id}`,
@@ -183,6 +221,34 @@ $(document).on("click", ".edit", function () {
       $("#graphicCard").val(product.graphicCard);
 
       tinymce.get("description").setContent(product.description);
+
+      // Load product images into URL inputs
+      if (product.images && product.images.length > 0) {
+        // Clear existing URL inputs except the first one
+        $(".url-input").slice(1).closest(".input-group").remove();
+
+        // Set first URL input
+        $(".url-input").first().val(product.images[0]);
+
+        // Add additional URL inputs for remaining images
+        for (let i = 1; i < product.images.length; i++) {
+          addUrlInputField();
+          $(".url-input").last().val(product.images[i]);
+        }
+
+        // Update remove buttons visibility
+        updateRemoveButtons();
+
+        // Load images into urlImages array and display them
+        urlImages = [...product.images];
+        console.log("Loaded urlImages for edit:", urlImages);
+        showUrlImages();
+      } else {
+        // Clear URL inputs if no images
+        $(".url-input").val("");
+        urlImages = [];
+        showUrlImages();
+      }
     },
   });
 });

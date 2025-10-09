@@ -25,13 +25,13 @@ exports.uploadProductImages = (req, res, next) => {
 };
 
 exports.resizeProductImages = catchAsync(async (req, res, next) => {
-  req.body.images = [];
+  let images = [];
 
   // Handle uploaded files
   if (req.files && req.files.images) {
     for (const file of req.files.images) {
       const result = await cloudinary.uploader.upload(file.path);
-      req.body.images.push(result.url);
+      images.push(result.url);
     }
   }
 
@@ -39,10 +39,15 @@ exports.resizeProductImages = catchAsync(async (req, res, next) => {
   if (req.body.urlImages) {
     try {
       const urlImages = JSON.parse(req.body.urlImages);
-      req.body.images = [...req.body.images, ...urlImages];
+      images = [...images, ...urlImages];
     } catch (error) {
       console.error("Error parsing URL images:", error);
     }
+  }
+
+  // Only update images if we have new images
+  if (images.length > 0) {
+    req.body.images = images;
   }
 
   next();
